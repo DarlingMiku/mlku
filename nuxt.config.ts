@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   telemetry: { enabled: false },
   ssr: false,
   app: {
+    baseURL: '/mlku/',
     head: {
       htmlAttrs: { lang: "ru" },
       titleTemplate: "MIKU",

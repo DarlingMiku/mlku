@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    
+    хуй
 </template>
 
 <style lang="scss" scoped>

@@ -1,7 +1,7 @@
 <script lang="ts" setup></script>
 
 <template>
-    <h1>хуй</h1>
+    <h1>АНТОН ЛОХ</h1>
 </template>
 
 <style lang="scss" scoped></style>

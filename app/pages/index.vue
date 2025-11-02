@@ -1,11 +1,7 @@
-<script lang="ts" setup>
-
-</script>
+<script lang="ts" setup></script>
 
 <template>
-    хуй
+    <h1>хуй</h1>
 </template>
 
-<style lang="scss" scoped>
-    
-</style>
+<style lang="scss" scoped></style>

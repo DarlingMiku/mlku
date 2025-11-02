@@ -23,7 +23,6 @@ export default defineNuxtConfig({
     host: "0.0.0.0",
     port: 8000,
   },
-  modules: ["@nuxtjs/device"],
   experimental: {
     defaults: {
       nuxtLink: {

@@ -1,6 +1,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: false },
   telemetry: { enabled: false },
+  ssr: false,
   app: {
     head: {
       htmlAttrs: { lang: "ru" },

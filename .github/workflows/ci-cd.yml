@@ -3,12 +3,11 @@ name: CI/CD
 on:
   push:
     branches:
-      - main   # workflow запускается только при пуше в main
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v3
       - name: Setup Node.js
@@ -16,24 +15,27 @@ jobs:
         with:
           node-version: 20
       - run: npm ci
-      # - run: npm test
       - run: npm run build
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist
+          path: ./dist
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'  # проверка, что мы в main
+    if: github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v3
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
         with:
-          node-version: 20
-      - run: npm i   
-      - run: npm ci
-      - run: npm run build
+          name: dist
+          path: ./dist
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GH_PAT }}
           publish_dir: ./dist
+          publish_branch: gh-pages

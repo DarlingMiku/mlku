@@ -1,7 +1,11 @@
 <script lang="ts" setup></script>
 
 <template>
-    <h1>АНТОН ЛОХ</h1>
+    <Hero />
+    <About />
+    <Skills />
+    <Projects />
+    <Contacts />
 </template>
 
 <style lang="scss" scoped></style>

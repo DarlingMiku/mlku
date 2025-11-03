@@ -19,10 +19,13 @@ body {
 }
 
 body {
-    // font-family: "Geometria";
+    font-family: "DigitalPixelV124";
+    font-size: 40px;
     margin: 0;
     padding: 0;
     height: 100%;
+    background-color: black;
+    color: $white;
 
     & > #__nuxt {
         display: flex;
